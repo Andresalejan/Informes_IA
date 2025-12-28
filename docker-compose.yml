@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: informesia-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: informes
+      POSTGRES_PASSWORD: informes
+      POSTGRES_DB: informesia
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

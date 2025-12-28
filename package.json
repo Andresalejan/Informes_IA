@@ -7,7 +7,9 @@
     "dev": "concurrently -n client,server -c blue,green \"npm --workspace client run dev\" \"npm --workspace server run dev\"",
     "dev:client": "npm --workspace client run dev",
     "dev:server": "npm --workspace server run dev",
-    "build": "npm --workspace client run build && npm --workspace server run build"
+    "build": "npm --workspace client run build && npm --workspace server run build",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down"
   },
   "keywords": [],
   "author": "",
