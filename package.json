@@ -1,0 +1,27 @@
+{
+  "name": "informesia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -n client,server -c blue,green \"npm --workspace client run dev\" \"npm --workspace server run dev\"",
+    "dev:client": "npm --workspace client run dev",
+    "dev:server": "npm --workspace server run dev",
+    "build": "npm --workspace client run build && npm --workspace server run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "packageManager": "npm@10.9.4"
+}
